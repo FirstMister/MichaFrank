@@ -1,0 +1,243 @@
+@charset "UTF-8";
+/* CSS Document */
+@font-face {
+    font-family: 'BebasNeue-Regular';
+    src: url("BebasNeue-Regular.ttf")format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    color: white;
+}
+html {
+    scroll-behavior: smooth;
+    color: white;
+}
+#myVideo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#opener {}
+#wrapper2, #wrapper3 {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centering y-axis */
+    align-items: center; /* Centering x-axis */
+}
+#wrapper4 {
+    margin: auto;
+    width: 80%;
+    padding: 20px;
+}
+#sightsImage, #culinaryImage, #trafficImage {
+    width: 600px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+#sightsText, #culinaryText {
+    display: flex;
+}
+#trafficText {
+    display: flex;
+    padding: 20px;
+    padding-left: 30px;
+}
+/* Add some content at the bottom of the video/page */
+#content {
+    position: absolute;
+    margin: 0 auto;
+    color: #f1f1f1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: BebasNeue-Regular;
+    -webkit-animation: adjustText 1s infinite alternate;
+    -moz-animation: adjustText 2s infinite alternate;
+    -o-animation: adjustText 2s infinite alternate;
+    animation: adjustText 2s infinite alternate;
+}
+@keyframes adjustText {
+    from {
+        font-size: 30px;
+    }
+    to {
+        font-size: 35px;
+    }
+}
+#sights, #culinary, #traffic, #Food {
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 20px;
+}
+#textSights, #textBahn, #textEssen {
+    width: 60%;
+    align-content: center;
+    text-align: center;
+    line-height: 20px;
+    font-size: 14px;
+    margin: auto;
+}
+#Textest {
+    height: 200px;
+    background-color: blue;
+}
+#Subtext {
+    position: absolute;
+    margin: 0 auto;
+    color: #f1f1f1;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-style: italic;
+}
+/* Style the button used to pause/play the video */
+#arrowdown {
+    width: 300px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    margin: 0 auto;
+    margin-top: 400px;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+}
+#myBtn:hover {
+    color: white;
+}
+#footer {
+    background-color: black;
+    line-height: 40px;
+    color: white;
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    vertical-align: middle;
+}
+#arrowdown {
+    width: 100px;
+}
+h1 {
+    font-family: BebasNeue-Regular;
+    font-size: 56px;
+}
+#img-zoomer-box {
+    width: 80%;
+    height: auto;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+#img-1 {
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#img-zoomer-box:hover, #img-zoomer-box:active {
+    cursor: zoom-in;
+    display: block;
+}
+#img-zoomer-box:hover #img-2, #img-zoomer-box:active #img-2 {
+    opacity: 1;
+}
+#img-2 {
+    width: 340px;
+    height: 340px;
+    background: url("BerlinMap.png") no-repeat #FFF;
+    box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+    position: absolute;
+    opacity: 0;
+    border: 4px solid whitesmoke;
+    z-index: 99;
+    border-radius: 100%;
+    display: block;
+    transition: opacity .2s;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 667px) {
+    #content {
+        position: absolute;
+        margin: 0 auto;
+        color: #f1f1f1;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 32px;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: BebasNeue-Regular;
+        -webkit-animation: adjustText 1s infinite alternate;
+        -moz-animation: adjustText 2s infinite alternate;
+        -o-animation: adjustText 2s infinite alternate;
+        animation: adjustText 2s infinite alternate;
+    }
+    h1 {
+        padding: 0;
+        font-size: 26px;
+    }
+    #sightsImage, #culinaryImage {
+        width: 200px;
+        height: 100px;
+        padding-right: 10px;
+        padding-left: 10px;
+        margin-left: auto;
+    }
+    #arrowdown {
+        width: 20px;
+        font-size: 18px;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        margin-top: 50px;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-style: italic;
+    }
+    #wrapper3 {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centering y-axis */
+        align-items: center; /* Centering x-axis */
+    }
+    #wrapper4 {
+        width: 82%;
+        padding: 0px;
+        margin: auto;
+    }
+    #trafficText {
+        padding: 20px;
+        width: 80%;
+        margin-left: auto;
+        justify-content: center;
+        margin-right: auto;
+        display: table-row;
+    }
+}

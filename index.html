@@ -1,0 +1,236 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Unbenanntes Dokument</title>
+<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+<link href="style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="grid-gallery.min.css">
+<link rel="stylesheet" href="styleslider.css">
+<link rel="stylesheet" type="text/css" href="glider.css" />
+<script src="glider.js"></script> 
+<script>
+      window.addEventListener('load',function(){
+        document.querySelector('.glider').addEventListener('glider-slide-visible', function(event){
+            var glider = Glider(this);
+            console.log('Slide Visible %s', event.detail.slide)
+        });
+        document.querySelector('.glider').addEventListener('glider-slide-hidden', function(event){
+            console.log('Slide Hidden %s', event.detail.slide)
+        });
+        document.querySelector('.glider').addEventListener('glider-refresh', function(event){
+            console.log('Refresh')
+        });
+        document.querySelector('.glider').addEventListener('glider-loaded', function(event){
+            console.log('Loaded')
+        });
+
+        window._ = new Glider(document.querySelector('.glider'), {
+            slidesToShow: 1, //'auto',
+            slidesToScroll: 1,
+            itemWidth: 150,
+            draggable: true,
+            scrollLock: false,
+            dots: '#dots',
+            rewind: true,
+            arrows: {
+                prev: '.glider-prev',
+                next: '.glider-next'
+            },
+            responsive: [
+                {
+                    breakpoint: 800,
+                    settings: {
+                        slidesToScroll: 'auto',
+                        itemWidth: 300,
+                        slidesToShow: 'auto',
+                        exactWidth: true
+                    }
+                },
+                {
+                    breakpoint: 700,
+                    settings: {
+                        slidesToScroll: 4,
+                        slidesToShow: 4,
+                        dots: false,
+                        arrows: false,
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToScroll: 3,
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 500,
+                    settings: {
+                        slidesToScroll: 2,
+                        slidesToShow: 2,
+                        dots: false,
+                        arrows: true,
+                        scrollLock: false
+                    }
+                }
+            ]
+        });
+      });
+    </script> 
+<script src="circletype.min.js"></script>
+</head>
+
+<body>
+	
+		  <!-- Hintergrundvideo -->
+
+<div id="opener"> 
+  <!-- The video -->
+  <div id="background">
+    <video autoplay muted loop id="myVideo">
+      <source src="animation.mp4" type="video/mp4">
+    </video>
+  </div>
+  
+  
+  <div id="content">
+    <h2 id="curved">BERLIN</h2>
+    
+  <!-- Berlin runder animierter Text -->
+    
+  </div>
+  <script>
+	new CircleType(document.getElementById('curved'))
+  .radius(384);
+	</script>
+  <div id="myBtn"> <a href="#culinary"> <img id="arrowdown" src="downarrow.png" alt="arrowdown" > </a> </div>
+</div>
+	
+		 <!-- Headline Sehenswürdigkeiten -->
+
+	
+<div id="culinary">
+  <h1> Sehenwürdigkeiten</h1>
+</div>
+	
+		 <!-- Image Slider Sehenswürdigkeiten -->
+
+<div class="glider-contain">
+  <div class="glider">
+    <div><img alt="Test" src="Bilder Sights/S1.jpg"></div>
+    <div><img alt="Test" src="Bilder Sights/S2.jpg"></div>
+    <div><img alt="Test" src="Bilder Sights/S3.jpg"></div>
+    <div><img alt="Test" src="Bilder Sights/S4.jpg"></div>
+    <div><img alt="Test" src="Bilder Sights/S5.jpg"></div>
+    <div><img alt="Test" src="Bilder Sights/S6.jpg"></div>
+    <div><img alt="Test" src="Bilder Sights/S7.jpg"></div>
+  </div>
+  <button class="glider-prev">&laquo;</button>
+  <button class="glider-next">&raquo;</button>
+  <div id="dots"></div>
+</div>
+	
+		 <!-- Text zu sehenswürdigkeiten -->
+
+	<div id="textSights">
+  <p> Wusstet Ihr, dass es in der Deutschen Hauptstadt mehr als 140 Museen und mehr als 1.400 Brücken gibt? Außerdem findet man mehr als 100 Sehenswürdigkeiten in Berlin. Für jeden Geschmack und jedes Alter gibt es in Berlin unterschiedliche Attraktionen zu erkunden. Zudem gibt es zahlreiche berühmte historische Gebäude, die eine wichtige Rolle in der Deutsche Geschichte gespielt haben.</p>
+</div>
+<div id="traffic">
+	
+		 <!-- Öffentliche Verkehrsmittel Headline -->
+
+	
+  <h1> Öffentliche Verkehrsmittel</h1>
+</div>
+	
+			 <!-- Ubahn Plan mit Zoom Js -->
+
+<div id="img-zoomer-box"> 
+	<img id="img-1" src="BerlinMap.png" alt="Zoom Image on Mouseover">
+  <div id="img-2"></div>
+</div>
+	
+	 <!-- Text Öffentliche Verkehrsmittel -->
+
+	<div id="textBahn">
+  <p> Berlin ist eine Stadt mit überraschend verlässlichen öffentlichen Verkehrsmitteln. Nutzen Sie daher während Ihres Aufenthaltes durchaus die vielfältigen Angebote der Berliner Verkehrsbetriebe.</p>
+</div>
+	
+		 <!-- Headline Kulinarisches -->
+
+<div id="Food">
+  <h1> Kulinarisches</h1>
+</div>
+	
+		 <!-- Image grid Gallery -->
+
+<div class="content">
+  <div class="gg-container">
+    <div class="gg-box"> 
+		<img alt="E1" src="Bilder Essen/1.jpg"> 
+		<img alt="E1" src="Bilder Essen/2.jpg"> 
+		<img alt="E1" src="Bilder Essen/3.jpg"> 
+		<img alt="E1" src="Bilder Essen/4.jpg"> 
+		<img alt="E1" src="Bilder Essen/5.jpg"> 
+		<img alt="E1" src="Bilder Essen/6.jpg"> 
+		<img alt="E1" src="Bilder Essen/7.jpg"> 
+		<img alt="E1" src="Bilder Essen/8.jpg"> 
+		<img alt="E1" src="Bilder Essen/9.jpg"> 
+	  </div>
+  </div>
+</div>
+	
+				 <!-- Text Kulinarisches -->
+
+	<div id="textEssen">
+  <p> In Berlin eröffnen gefühlt jeden Monat zehn neue Restaurants und Cafés (und genauso viele schließen auch wieder), sodass es durchaus schwer werden kann, kulinarisch den Überblick zu behalten. Vor allem gibt es in Berlin aber auch so viele gute Restaurants, dass man gar nicht weiß, wo man anfangen soll. In der deutschen Hauptstadt kann man sich durch die ganze Welt essen und braucht dafür gerade mal eine U-Bahnfahrt: von Pommes mit Sauerkraut, veganem Spaghettieis, Sauerteigpizza und superregionalem Zero-Waste-Restaurant ist in Berlin alles dabei. 
+		</p>
+		
+	</div>
+	
+					 <!-- Grid Gallery-->
+
+<script src="js/grid-gallery.min.js"></script> 
+<script>
+    gridGallery({
+      selector: ".dark",
+      darkMode: true
+    });
+    gridGallery({
+      selector: "#horizontal",
+      layout: "horizontal"
+    });
+    gridGallery({
+      selector: "#square",
+      layout: "square"
+    });
+    gridGallery({
+      selector: "#gap",
+      gaplength: 10
+    });
+    gridGallery({
+      selector: "#heightWidth",
+      rowHeight: 180,
+      columnWidth: 280
+    });
+		
+		
+    </script> 
+<script src="grid-gallery.js"></script> 
+	
+						 <!-- jquery-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script> 
+<script src="script.js"></script> 
+<script src="scriptslide.js"></script>
+	
+								 <!-- Footer-->
+
+<footer>
+  <div id="footer"> Impressum <br>
+    Contact </div>
+</footer>
+</body>
+</html>
