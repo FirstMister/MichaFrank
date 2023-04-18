@@ -304,8 +304,8 @@ margin-bottom: 150px;
 #progressBarContainer {
   position: absolute;
   bottom: 10%;
-  left: 10%;
-  right: 10%;
+  left: 25%; /* Change this to adjust the container's horizontal position */
+  width: 50%; /* Change this to adjust the container's width */
   height: 10px;
   background-color: #f3f3f3;
   border-radius: 5px;

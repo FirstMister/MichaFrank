@@ -11,16 +11,17 @@ window.addEventListener('load', function () {
     progressBar.style.width = percentage + '%';
   }
 
-  video.addEventListener('progress', function () {
+  function checkBufferedProgress() {
     if (video.buffered.length > 0) {
       const percentage = (video.buffered.end(0) / video.duration) * 100;
       updateProgressBar(percentage);
     }
-  });
-
-  if (video.readyState >= 3) {
-    hideLoadingScreen();
-  } else {
-    video.addEventListener('canplaythrough', hideLoadingScreen, false);
+    if (video.readyState >= 3) {
+      hideLoadingScreen();
+    } else {
+      setTimeout(checkBufferedProgress, 100);
+    }
   }
+
+  checkBufferedProgress();
 });
