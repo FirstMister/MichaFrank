@@ -10,6 +10,7 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: black;
 }
 
 .navbar {
@@ -55,7 +56,7 @@ body {
 
   @media screen and (max-width: 768px) {
     .navbar {
-        width: 100%;
+        width: 80%;
         flex-wrap: wrap;
     }
     }
@@ -63,14 +64,47 @@ body {
 html {
     scroll-behavior: smooth;
     color: white;
+
+
+
 }
+
+/* Add this media query for mobile devices */
+@media screen and (max-width: 768px) {
+   #myVideo {
+        width: 220px;
+    }
+}
+
 #myVideo {
-    width: 100%;
-    height: 110%;
-    object-fit: cover;
-    margin-top: 0;
+   width: auto;
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+
 }
-#opener {}
+
+
+#opener {
+width: 100%;
+  max-width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  #opener {
+    height: auto;
+  }
+
+  #myVideo {
+    width: 100%;
+    height: auto;
+  }
+}
 #wrapper2, #wrapper3 {
     width: 80%;
     display: flex;
@@ -123,15 +157,17 @@ html {
         font-size: 35px;
     }
 }
-#sights, #culinary, #traffic, #Food {
+#sights, #culinary, #traffic, #work #Food {
     width: 100%;
     height: 20%;
     text-align: center;
     vertical-align: middle;
     line-height: 20px;
 }
+
+
 #textSights, #textBahn, #textEssen {
-    width: 60%;
+    width: 90%;
     align-content: center;
     text-align: center;
     line-height: 20px;
@@ -140,7 +176,7 @@ html {
 }
 #Textest {
     height: 200px;
-    background-color: blue;
+    background-color: black;
 }
 #Subtext {
     position: absolute;
@@ -158,13 +194,13 @@ html {
 }
 /* Style the button used to pause/play the video */
 #arrowdown {
-    width: 250px;
+    width: 150px;
     font-size: 18px;
     border: none;
     cursor: pointer;
     position: absolute;
     margin: 0 auto;
-    margin-top: 500px;
+    margin-top: 550px;
     top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -174,6 +210,72 @@ html {
     align-items: center;
     font-style: italic;
 }
+@media screen and (max-width: 1150px) {
+
+#arrowdown {
+    width: 150px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    margin: 0 auto;
+    margin-top: 400px;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+}
+
+}
+
+@media screen and (max-width: 768px) {
+
+#arrowdown {
+    width: 150px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    margin: 0 auto;
+    margin-top: 300px;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+}
+
+}
+
+@media screen and (max-width: 450px) {
+
+#arrowdown {
+    width: 90px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    margin: 0 auto;
+    margin-top: 600px;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+}
+
+}
+
 #myBtn:hover {
     color: white;
 }
@@ -186,9 +288,7 @@ html {
     text-align: center;
     vertical-align: middle;
 }
-#arrowdown {
-    width: 100px;
-}
+
 h1 {
     font-family: BebasNeue-Regular;
     font-size: 56px;
@@ -238,7 +338,7 @@ h1 {
         justify-content: center;
         align-items: center;
         font-size: 32px;
-        top: 10%;
+        top: 25%;
         left: 50%;
         transform: translate(-50%, -50%);
         font-family: BebasNeue-Regular;
@@ -258,22 +358,7 @@ h1 {
         padding-left: 10px;
         margin-left: auto;
     }
-    #arrowdown {
-        width: 20px;
-        font-size: 18px;
-        border: none;
-        cursor: pointer;
-        position: absolute;
-        margin-top: 50px;
-        top: 10%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding-top: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-style: italic;
-    }
+
     #wrapper3 {
         width: 80%;
         display: flex;
@@ -316,4 +401,97 @@ margin-bottom: 150px;
   width: 0%;
   background-color: #4caf50;
   border-radius: 5px;
+}
+
+#aboutmetext{
+    text-align: left; /* Add this line to center the text */
+width: 40%;
+}
+
+@media only screen and (max-width: 667px) {
+#aboutmetext{
+    text-align: center; /* Add this line to center the text */
+    width: 80%;
+
+}}
+
+#about-container {
+  display: flex;
+  flex-direction: row; /* Change this from column to row */
+  align-items: top; /* Center the items vertically */
+  justify-content: center; /* Center the items horizontally */
+  width: 100%;
+}
+@media only screen and (max-width: 667px) {
+
+#about-container {
+  flex-direction: column; /* Change this from column to row */
+  align-items: center; /* Center the items vertically */
+  justify-content: center; /* Center the items horizontally */
+  width: 100%;
+}
+}
+#about-section {
+  flex-direction: column;
+  align-items: top;
+  width: 100%;
+}
+
+#about-section h1{
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+margin-top:40px
+}
+
+
+
+
+#about-section p{
+  font-size: 30px;
+  width: 80%;
+}
+@media only screen and (max-width: 667px) {
+
+#about-section p{
+  font-size: 16px;
+  width: 80%;
+}
+}
+
+
+h1 {
+  font-family: BebasNeue-Regular;
+  font-size: 56px;
+  text-align: center;
+  margin-bottom: 5px; /* Add some spacing between the title and the content */
+}
+
+#placeholder-image {
+  border-radius: 50%; /* Make the image round */
+height: 150px;
+  width: 150px;
+
+}
+
+.centeredslider {
+
+margin-top:20px;}
+.button {
+display: inline-block;
+  background-color: #3498db;
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 auto;
+  text-decoration: none;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #2980b9;
 }
