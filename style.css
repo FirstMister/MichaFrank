@@ -624,7 +624,7 @@ margin-top: 20;
 
   .slides {
     display: flex;
-    width: 200%; /* Update this line */
+    width: 400%; /* Update this line */
     height: 100%;
     transform: translateX(0);
     transition: transform 0.5s ease-in-out;
@@ -633,7 +633,7 @@ margin-top: 20;
   .slide {
     display: flex;
     justify-content: center;
-    width: 50%; /* Update this line */
+    width: 25%; /* Update this line */
     height: 100%;
   }
 
@@ -651,6 +651,10 @@ margin-top: 20;
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+   .image-container video {
+       height: 100%;
+
   }
 
   .text-container {

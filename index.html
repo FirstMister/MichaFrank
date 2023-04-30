@@ -157,6 +157,38 @@
     <div class="slide">
       <div class="content-container">
         <div class="image-container">
+            <video autoplay muted loop id="myVideo3">
+
+          <source src="clowns1.mp4" type="video/mp4">
+                   </video>
+        </div>
+        <div class="text-container">
+          <h2>Business Clowns</h2>
+          <p>A VIBRANT DEFIANCE OF CONFORMITY, EMBODYING THE UNSPOKEN DESIRE TO BREAK FREE FROM THE MONOTONOUS CHAINS OF THE CORPORATE WORLD. </p>
+          <button class="more-btn">More</button>
+        </div>
+      </div>
+    </div>
+
+       <div class="slide">
+      <div class="content-container">
+       <div class="image-container">
+            <video autoplay muted loop id="myVideo4">
+
+          <source src="k67q.mp4" type="video/mp4">
+                   </video>
+        </div>
+        <div class="text-container">
+          <h2>Exploring Nature with Unreal Engine 5</h2>
+          <p>I've recently experimented with Unreal Engine 5, creating a small yet fascinating kiosk environment to try out the engine's incredible vegetation features and advanced capabilities. This intimate, immersive experience demonstrates the true potential of the engine and provides a glimpse into the breathtaking worlds it can bring to life.</p>
+          <button class="more-btn">More</button>
+        </div>
+      </div>
+    </div>
+
+       <div class="slide">
+      <div class="content-container">
+        <div class="image-container">
 
           <img src="img/squirreltree.jpg" alt="Placeholder Image">
         </div>
@@ -168,6 +200,9 @@
         </div>
       </div>
     </div>
+
+
+
     <div class="slide">
       <div class="content-container">
         <div class="image-container">
@@ -177,12 +212,15 @@
                    </video>
         </div>
         <div class="text-container">
-          <h2>Headline 2</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.</p>
+          <h2>Vintage Fuel: A Pump of Nostalgia</h2>
+          <p>
+"A nostalgic photograph unexpectedly transported me to my teenage years, when a quiet, abandoned factory hall faced my home. Concealed within its confines, an old gas pump awaited discovery. Moved by the image, I set out to recreate this cherished artifact in a 3D render, harnessing the power of Substance Painter to capture its essence and revive fond memories from a place that holds a special place in my heart."</p>
           <button class="more-btn">More</button>
         </div>
 
       </div>
+
+
     </div>
 
 
@@ -430,10 +468,13 @@
     });
 </script>
 <script>
-  let slideIndex = 1;
-  const slides = document.querySelectorAll('.slide');
+let slideIndex = 1;
+let startX;
+let autoSlideIntervalId; // To store the ID of the interval
 
-  function shiftSlide(n) {
+const slides = document.querySelectorAll('.slide');
+
+function shiftSlide(n) {
   slideIndex += n;
   if (slideIndex > slides.length) {
     slideIndex = 1;
@@ -447,6 +488,57 @@
 }
 
 shiftSlide(0);
+
+// Set the interval for automatic sliding
+const autoSlideInterval = 5000; // 5 seconds
+autoSlideIntervalId = setInterval(() => {
+  shiftSlide(1);
+}, autoSlideInterval);
+
+// Add event listeners to stop the automatic sliding on user interaction
+const slidesContainer = document.querySelector('.slides');
+slidesContainer.addEventListener('mousedown', () => {
+  clearInterval(autoSlideIntervalId);
+});
+
+slidesContainer.addEventListener('touchstart', () => {
+  clearInterval(autoSlideIntervalId);
+});
+
+// Add touch and mouse event listeners to enable touch/mouse sliding
+slidesContainer.addEventListener('touchstart', e => {
+  startX = e.touches[0].clientX;
+});
+
+slidesContainer.addEventListener('mousedown', e => {
+  startX = e.clientX;
+});
+
+slidesContainer.addEventListener('touchmove', e => {
+  const distX = e.touches[0].clientX - startX;
+  if (distX > 0) {
+    shiftSlide(-1); // slide to the previous slide
+  } else if (distX < 0) {
+    shiftSlide(1); // slide to the next slide
+  }
+});
+
+slidesContainer.addEventListener('mousemove', e => {
+  const distX = e.clientX - startX;
+  if (distX > 0) {
+    shiftSlide(-1); // slide to the previous slide
+  } else if (distX < 0) {
+    shiftSlide(1); // slide to the next slide
+  }
+});
+
+slidesContainer.addEventListener('mouseup', () => {
+  startX = null;
+});
+
+slidesContainer.addEventListener('mouseleave', () => {
+  startX = null;
+});
 </script>
 </body>
 </html>
