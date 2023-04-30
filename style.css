@@ -77,12 +77,20 @@ html {
 }
 
 #myVideo {
-   width: auto;
-  height: 100%;
+   width: 100%;
+  height: auto;
   display: block;
   margin: 0 auto;
+ top: 0;
+  left: 0;
+    min-width: 100%;
+  min-height: 100%;
+  position: relative;
+    object-fit: cover;
 
 }
+
+
 
 
 #opener {
