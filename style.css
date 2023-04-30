@@ -1,28 +1,71 @@
 @charset "UTF-8";
 /* CSS Document */
 @font-face {
-    font-family: 'BebasNeue-Regular';
-    src: url("BebasNeue-Regular.ttf")format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    color: white;
+  font-family: 'BebasNeue-Regular';
+  src: url("BebasNeue-Regular.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  color: white;
 }
 body {
-    margin: 0;
-    padding: 0;
-    background-color: black;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+    overflow-x: hidden; /* Add this line */
+
+
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .navbar {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    width: 50%;
-    font-size: 1.2rem;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  font-size: 1.2rem;
+}
+
+.nav-item {
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.social-icons {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 15px;
+  fill: white;
+}
+
+.social-icons a {
+  text-decoration: none;
+}
+
+
+
+@media (max-width: 768px) {
+  .social-icons {
+     position: absolute;
+  top: 40px;
+  left: 46%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  }
 }
 
 #loadingScreen {
@@ -616,59 +659,116 @@ margin-top: 20;
 }
 
 .slider {
-    position: relative;
-    width: 100%;
-    height: 50vh;
-    overflow: hidden;
-  }
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
+}
 
-  .slides {
-    display: flex;
-    width: 400%; /* Update this line */
-    height: 100%;
-    transform: translateX(0);
-    transition: transform 0.5s ease-in-out;
-  }
+.slides {
+  display: flex;
+  width: 400%;
+  height: 100%;
+  transform: translateX(0);
+  transition: transform 0.5s ease-in-out;
+}
 
-  .slide {
-    display: flex;
-    justify-content: center;
-    width: 25%; /* Update this line */
-    height: 100%;
-  }
+.slide {
+  display: flex;
+  justify-content: center;
+  width: 25%;
+  height: 100%;
+}
 
+.content-container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.image-container {
+  flex: 1;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-container video {
+  height: 100%;
+}
+
+.text-container {
+  flex: 1;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+}
+
+.text-container h2 {
+  margin-top: 112px;
+}
+
+/* ... previous styles ... */
+
+/* ... previous styles ... */
+
+/* Mobile styles */
+/* ... previous styles ... */
+
+/* Mobile styles */
+/* ... previous styles ... */
+
+/* Mobile styles */
+@media (max-width: 768px) {
   .content-container {
-    display: flex;
-    width: 100%;
-    max-width: 1200px;
-  }
-
-  .image-container {
-    flex: 1;
-  }
-
-  .image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-   .image-container video {
-       height: 100%;
-
+    flex-direction: column;
+    align-items: center;
+    min-height: auto; /* Set min-height to auto to allow content container to extend */
   }
 
   .text-container {
-    flex: 1;
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 2rem;
+    align-items: center;
+    text-align: center;
+    width: 80%; /* Adjust this value to control the width of the text field */
+    padding: 0;
+    box-sizing: border-box;
+    margin-bottom: 1rem; /* Add margin at the bottom of the text container */
   }
-    .text-container h2 {
-    margin-top: 112px;
+
+  .image-container {
+    width: 100%;
+    height: auto; /* Set height to auto to maintain the aspect ratio */
+    padding-bottom: 60%; /* Adjust this value to control the image height */
+    position: relative; /* Add position relative for video positioning */
+  }
+
+  .image-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Change object-fit to 'contain' instead of 'cover' */
+    background-color: black; /* Optional: add a background color to fill the empty space */
+  }
+
+  .text-container h2 {
+    margin-top: 0; /* Reset the margin-top for mobile */
+    margin-bottom: 0.5rem; /* Reduce the margin-bottom to decrease the space between the text and the headline */
+  }
+
+  .text-container p {
+    overflow-wrap: break-word; /* Add this line to break long words and prevent texts from being cut off */
+  }
 }
+
+
 
   .more-btn {
     display: inline-block;
