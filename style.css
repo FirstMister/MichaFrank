@@ -76,42 +76,32 @@ html {
     }
 }
 
-#myVideo {
-   width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
- top: 0;
-  left: 0;
-    min-width: 100%;
-  min-height: 100%;
-  position: relative;
-    object-fit: cover;
 
+#myVideo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
 }
 
 
-
-
 #opener {
-width: 100%;
+  width: 100%;
   max-width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 100vh; /* Add this line */
   overflow: hidden;
+  position: relative; /* Add this line */
 }
 
 @media screen and (min-width: 768px) {
   #opener {
-    height: auto;
   }
 
-  #myVideo {
-    width: 100%;
-    height: auto;
-  }
 }
 #wrapper2, #wrapper3 {
     width: 80%;
@@ -288,12 +278,12 @@ margin-top: 0;
 
 #arrowdown {
     width: 150px;
-    font-size: 18px;
+    font-size: 14px;
     border: none;
     cursor: pointer;
     position: absolute;
     margin: 0 auto;
-    margin-top: 300px;
+    margin-top: 522px;
     top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
