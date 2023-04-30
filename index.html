@@ -84,11 +84,12 @@
 </head>
 
 <body>
-	  <div id="loadingScreen">
-              <img src="logo.png" alt="Logo" id="spinningLogo">
-             <div id="progressBarContainer"> </div>
-      <div id="progressBar"></div>
-      </div>
+	<div id="loadingScreen">
+    <img src="logo.png" alt="Logo" id="spinningLogo">
+    <div id="progressBarContainer">
+        <div id="progressBar"></div>
+    </div>
+</div>
 
 	 <nav class="navbar">
     <span class="nav-item">HOME</span>
@@ -116,7 +117,7 @@
 	new CircleType(document.getElementById('curved'))
   .radius(384);-->
 	</script>
-  <div id="myBtn"> <a href="#about-section"> <img id="arrowdown" src="downarrow.png" alt="arrowdown" > </a> </div>
+  <div id="myBtn"> <a href="#Recent"> <img id="arrowdown" src="downarrow.png" alt="arrowdown" > </a> </div>
 </div>
 	
 		 <!-- Headline Sehenswürdigkeiten -->
@@ -124,17 +125,7 @@
 	
 
 
-      <div id="about-section">
-  <h1>About Me</h1>
-  <div id="about-container">
-    <img id="placeholder-image" src="me.jpg" alt="Placeholder Image">
-    <p id="aboutmetext">
-      Hi there! I'm Micha, a Berlin-based 3D Generalist and Graphic Designer with a passion for crafting visually striking and immersive digital experiences. My expertise spans across music videos, visuals for artists, brand collaborations, still images, and product renders.
 
-
-    </p>
-  </div>
-</div>
 	
 		 <!-- Image Slider Sehenswürdigkeiten
 
@@ -158,21 +149,50 @@
 	 <!-- <div id="textSights">
   <p> Wusstet Ihr, dass es in der Deutschen Hauptstadt mehr als 140 Museen und mehr als 1.400 Brücken gibt? Außerdem findet man mehr als 100 Sehenswürdigkeiten in Berlin. Für jeden Geschmack und jedes Alter gibt es in Berlin unterschiedliche Attraktionen zu erkunden. Zudem gibt es zahlreiche berühmte historische Gebäude, die eine wichtige Rolle in der Deutsche Geschichte gespielt haben.</p>
 </div>-->
-<div id="traffic">
-	
-		 <!-- Öffentliche Verkehrsmittel Headline -->
+<div id="Recent">
+        <h1> Recent Projects</h1>
+    </div>
+<div class="slider">
+  <div class="slides">
+    <div class="slide">
+      <div class="content-container">
+        <div class="image-container">
 
-	
- <!-- <h1> WORK</h1>-->
+          <img src="img/squirreltree.jpg" alt="Placeholder Image">
+        </div>
+        <div class="text-container">
+          <h2>Creating a Digital Squirrel</h2>
+          <p>Description: "Behold this charming and expressive 3D squirrel, crafted by me using Blender and rendered with the power of Octane. This little critter has been
+              meticulously sculpted, retopologized, and rigged to achieve a perfect balance of realism and character. </p>
+          <button class="more-btn">More</button>
+        </div>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="content-container">
+        <div class="image-container">
+          <img src="https://via.placeholder.com/800x400" alt="Placeholder Image">
+        </div>
+        <div class="text-container">
+          <h2>Headline 2</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.</p>
+          <button class="more-btn">More</button>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+  </div>
+  <button class="arrow arrow-left" onclick="shiftSlide(-1)">&#10094;</button>
+  <button class="arrow arrow-right" onclick="shiftSlide(1)">&#10095;</button>
 </div>
 	
 			 <!-- Ubahn Plan mit Zoom Js -->
 
- <!-- <div id="img-zoomer-box">
-	<img id="img-1" src="BerlinMap.png" alt="Zoom Image on Mouseover">
-  <div id="img-2"></div>
-</div> -->
-	
+
 	 <!-- Text Öffentliche Verkehrsmittel
 
 	<div id="textBahn">
@@ -182,8 +202,8 @@
 
   <h1> WORK</h1>
            <div id="textEssen">
-<h2> Business Clowns </h2>
-   <p></p> A vibrant defiance of conformity, embodying the unspoken desire to break free from the monotonous chains of the corporate world.
+<h2> BUSINESS CLOWNS (COMING SOON) </h2>
+   <p></p> A VIBRANT DEFIANCE OF CONFORMITY, EMBODYING THE UNSPOKEN DESIRE TO BREAK FREE FROM THE MONOTONOUS CHAINS OF THE CORPORATE WORLD.
 </h2>
 <!--<button class="button">Click me</button> -->
 
@@ -210,6 +230,28 @@
 <div id="Food">
   <h1> Portfolio</h1>
 </div>
+
+     <div id="img-zoomer-box">
+    <div class="image-container">
+        <img id="img-1" src="portfolio/papagei.jpeg" alt="Zoom Image on Mouseover">
+        <div id="img-2"></div>
+    </div>
+    <div id="bildtext1">
+<h2> Internet Cafe </h2>
+<p>Step into the vivid world of Internet Café, a mesmerizing 3D artwork that weaves together
+    the nostalgic charm of a bygone era with the untamed beauty of the natural world.
+    Crafted with meticulous attention to detail, this visual symphony invites you to explore
+    the harmony between the digital and the organic.</p>
+
+
+
+
+</h2>
+<!--<button class="button">Click me</button> -->
+
+	</div>
+</div>
+
 
        <!-- <section class="lazy slider" data-sizes="50vw">
     <div>
@@ -261,7 +303,18 @@
 	  </div>
   </div>
 </div>
-	
+
+       <div id="about-section">
+  <h1>About Me</h1>
+  <div id="about-container">
+    <img id="placeholder-image" src="me.jpg" alt="Placeholder Image">
+    <p id="aboutmetext">
+      Hi there! I'm Micha, a Berlin-based 3D Generalist and Graphic Designer with a passion for crafting visually striking and immersive digital experiences. My expertise spans across music videos, visuals for artists, brand collaborations, still images, and product renders.
+
+
+    </p>
+  </div>
+</div>
 				 <!-- Text Kulinarisches -->
 
 
@@ -372,6 +425,25 @@
         infinite: true
       });
     });
+</script>
+<script>
+  let slideIndex = 1;
+  const slides = document.querySelectorAll('.slide');
+
+  function shiftSlide(n) {
+  slideIndex += n;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  } else if (slideIndex < 1) {
+    slideIndex = slides.length;
+  }
+
+  const slidesContainer = document.querySelector('.slides');
+  const slidingPercentage = ((slideIndex - 1) * 100) / slides.length;
+  slidesContainer.style.transform = `translateX(-${slidingPercentage}%)`;
+}
+
+shiftSlide(0);
 </script>
 </body>
 </html>

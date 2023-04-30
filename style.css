@@ -167,13 +167,35 @@ width: 100%;
 
 
 #textSights, #textBahn, #textEssen {
-    width: 90%;
+    width: 50%;
     align-content: center;
     text-align: center;
     line-height: 20px;
     font-size: 14px;
     margin: auto;
 }
+#textEssen h2{
+margin-top: 0;
+margin-bottom: 0;
+
+}
+
+#textEssen p{
+margin-top: 0;
+}
+
+@media screen and (max-width: 768px) {
+
+#textEssen {
+    width: 80%;
+    align-content: center;
+    text-align: center;
+    line-height: 20px;
+    font-size: 14px;
+    margin: auto;
+}
+}
+
 #Textest {
     height: 200px;
     background-color: black;
@@ -194,13 +216,13 @@ width: 100%;
 }
 /* Style the button used to pause/play the video */
 #arrowdown {
-    width: 150px;
+    width: 100px;
     font-size: 18px;
     border: none;
     cursor: pointer;
     position: absolute;
     margin: 0 auto;
-    margin-top: 550px;
+    margin-top: 500px;
     top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -210,16 +232,38 @@ width: 100%;
     align-items: center;
     font-style: italic;
 }
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1250px) {
 
 #arrowdown {
-    width: 150px;
+    width: 100px;
     font-size: 18px;
     border: none;
     cursor: pointer;
     position: absolute;
     margin: 0 auto;
-    margin-top: 400px;
+    margin-top:410px;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+}
+
+}
+
+@media screen and (max-width: 1050px) {
+
+#arrowdown {
+    width: 100px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    margin: 0 auto;
+    margin-top:400px;
     top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -263,7 +307,7 @@ width: 100%;
     cursor: pointer;
     position: absolute;
     margin: 0 auto;
-    margin-top: 600px;
+    margin-top: 500px;
     top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -296,36 +340,50 @@ h1 {
 #img-zoomer-box {
     width: 80%;
     height: auto;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
+   display: flex;
+   margin: 0 auto;
 }
+
+@media only screen and (max-width: 1200px) {
+
+#img-zoomer-box {
+    width: 80%;
+    height: auto;
+   display: flex;
+   margin: 0 auto;
+}
+}
+
+
 #img-1 {
-    width: 70%;
-    display: block;
+    width: 50%;
     margin-left: auto;
     margin-right: auto;
+      flex-shrink: 0; /* Add this line to prevent image from stretching */
+
 }
-#img-zoomer-box:hover, #img-zoomer-box:active {
-    cursor: zoom-in;
-    display: block;
+
+#bildtext1{
+margin-left: 20px;
 }
-#img-zoomer-box:hover #img-2, #img-zoomer-box:active #img-2 {
-    opacity: 1;
+#bildtext1 h2{
+margin-bottom: 0px;
+margin-top: 0px;
+
+
 }
-#img-2 {
-    width: 340px;
-    height: 340px;
-    background: url("BerlinMap.png") no-repeat #FFF;
-    box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.3);
-    pointer-events: none;
-    position: absolute;
-    opacity: 0;
-    border: 4px solid whitesmoke;
-    z-index: 99;
-    border-radius: 100%;
-    display: block;
-    transition: opacity .2s;
+
+#bildtext1 p{
+font-size: 24px;
+}
+@media only screen and (max-width: 667px) {
+
+#bildtext1 p{
+font-size: 12px;
+margin-top: 0px;
+line-height: 13px;
+margin-bottom: 0px;
+}
 }
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 667px) {
@@ -383,7 +441,7 @@ h1 {
 
 #Logo {
 width: 250px;
-margin-bottom: 150px;
+margin-bottom: 90px;
 }
 
 #progressBarContainer {
@@ -406,6 +464,7 @@ margin-bottom: 150px;
 #aboutmetext{
     text-align: left; /* Add this line to center the text */
 width: 40%;
+margin-left: 20px;
 }
 
 @media only screen and (max-width: 667px) {
@@ -449,14 +508,28 @@ margin-top:40px
 
 #about-section p{
   font-size: 30px;
-  width: 80%;
+  width: 60%;
 }
 @media only screen and (max-width: 667px) {
 
 #about-section p{
   font-size: 16px;
   width: 80%;
+  align-items: center;
 }
+#aboutmetext {
+        text-align: center;
+        width: 80%;
+                margin-left: 0; /* Add this line to remove left margin on mobile */
+
+    }
+
+    #about-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
 }
 
 
@@ -469,9 +542,16 @@ h1 {
 
 #placeholder-image {
   border-radius: 50%; /* Make the image round */
+height: 250px;
+  width: 250px;
+
+}
+@media only screen and (max-width: 667px) {
+#placeholder-image {
+  border-radius: 50%; /* Make the image round */
 height: 150px;
   width: 150px;
-
+}
 }
 
 .centeredslider {
@@ -495,3 +575,130 @@ display: inline-block;
 .button:hover {
   background-color: #2980b9;
 }
+
+#worka h1 {
+margin-top: 20;
+
+}
+
+.image-container {
+    flex-grow: 1;
+    flex-shrink: 1;
+    max-width: 50%;
+    position: relative;
+}
+
+#img-1 {
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    flex-shrink: 0;
+}
+
+/* Add this to prevent the text from stretching the image */
+#bildtext1 {
+    flex-grow: 1;
+    flex-shrink: 1;
+    max-width: 50%;
+    margin-left: 20px;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+  }
+
+  .slides {
+    display: flex;
+    width: 200%; /* Update this line */
+    height: 100%;
+    transform: translateX(0);
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .slide {
+    display: flex;
+    justify-content: center;
+    width: 50%; /* Update this line */
+    height: 100%;
+  }
+
+  .content-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+  }
+
+  .image-container {
+    flex: 1;
+  }
+
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .text-container {
+    flex: 1;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+  }
+
+  .more-btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #1c1c1c;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+
+  .more-btn:hover {
+    background-color: #444;
+  }
+
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 2rem;
+
+    padding: 0.5rem;
+    cursor: pointer;
+    border: none;
+    z-index: 10;
+    }
+
+    .arrow-left {
+    left: 1rem;
+
+      transform: translateY(-50%) rotate(-45deg); /* Add rotate function */
+
+    }
+
+    .arrow-right {
+    right: 1rem;
+      transform: translateY(-50%) rotate(135deg); /* Add rotate function */
+
+    }
+
+    .arrow:hover {
+    background: rgba(0, 0, 0, 0.7);
+    }
+
+    .arrow:focus {
+    outline: none;
+    }
+
