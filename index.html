@@ -159,7 +159,7 @@
         <div class="image-container">
             <video autoplay muted loop id="myVideo3">
 
-          <source src="clowns1.mp4" type="video/mp4">
+          <source src="clownside.mp4" type="video/mp4">
                    </video>
         </div>
         <div class="text-container">
@@ -505,26 +505,13 @@ slidesContainer.addEventListener('touchstart', () => {
   clearInterval(autoSlideIntervalId);
 });
 
-// Add touch and mouse event listeners to enable touch/mouse sliding
+// Add touch event listeners to enable touch sliding
 slidesContainer.addEventListener('touchstart', e => {
   startX = e.touches[0].clientX;
 });
 
-slidesContainer.addEventListener('mousedown', e => {
-  startX = e.clientX;
-});
-
 slidesContainer.addEventListener('touchmove', e => {
   const distX = e.touches[0].clientX - startX;
-  if (distX > 0) {
-    shiftSlide(-1); // slide to the previous slide
-  } else if (distX < 0) {
-    shiftSlide(1); // slide to the next slide
-  }
-});
-
-slidesContainer.addEventListener('mousemove', e => {
-  const distX = e.clientX - startX;
   if (distX > 0) {
     shiftSlide(-1); // slide to the previous slide
   } else if (distX < 0) {
@@ -539,6 +526,7 @@ slidesContainer.addEventListener('mouseup', () => {
 slidesContainer.addEventListener('mouseleave', () => {
   startX = null;
 });
+
 </script>
 </body>
 </html>
