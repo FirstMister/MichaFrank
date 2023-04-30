@@ -89,6 +89,10 @@ html {
   transform: translateX(-50%) translateY(-50%);
 }
 
+#myVideo2 {
+}
+
+
 
 #opener {
   width: 100%;
@@ -220,7 +224,7 @@ margin-top: 0;
     cursor: pointer;
     position: absolute;
     margin: 0 auto;
-    margin-top: 500px;
+    margin-top: 660px;
     top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -584,6 +588,15 @@ margin-top: 20;
     flex-shrink: 1;
     max-width: 50%;
     position: relative;
+
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+.image-container img,
+.image-container video {
+    width: 100%;
+    height: auto;
 }
 
 #img-1 {
@@ -649,6 +662,9 @@ margin-top: 20;
     align-items: flex-start;
     padding: 2rem;
   }
+    .text-container h2 {
+    margin-top: 112px;
+}
 
   .more-btn {
     display: inline-block;
@@ -700,3 +716,8 @@ margin-top: 20;
     outline: none;
     }
 
+.media-object {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
